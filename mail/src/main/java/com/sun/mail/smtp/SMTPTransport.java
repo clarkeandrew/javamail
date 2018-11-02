@@ -1307,7 +1307,6 @@ public class SMTPTransport extends Transport {
                         validSentAddr, validUnsentAddr, invalidAddr);
             }
             logger.fine("message successfully delivered to mail server");
-            // TODO pass the response message through to the transport listener
             notifyTransportListeners(TransportEvent.MESSAGE_DELIVERED,
                     validSentAddr, validUnsentAddr,
                     invalidAddr, this.message, this.logMessage);
